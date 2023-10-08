@@ -11,4 +11,18 @@
 //Importante ❗
 //Considera las reglas sobre una entrada null
 
+function countPositives(str){
+    // primero verifico si es nulo o cero me retorne el array vacio
+    if(str === null || str.length === 0){
+        return [];
+    }
 
+    const positive = str.filter(num => num > 0).length;
+    //el reduce para sumarlos y obtener la suma de los números negativos
+    const negative = str.filter(num => num < 0).reduce((sum, num) => sum + num, 0);
+
+    return [positive, negative];
+
+}
+
+console.log(countPositives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))

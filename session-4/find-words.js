@@ -21,6 +21,13 @@ en total para formar palabras en el arreglo words.*/
 //
 
 function findWords(words){
-
+    
+    let newWord = words.filter((word) => word.length === 3)
+    
+      return newWord 
+    
 
 }
+
+
+console.log(findWords(["cat","bt","hat","tree"]))
